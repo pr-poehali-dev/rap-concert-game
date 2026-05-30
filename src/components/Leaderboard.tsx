@@ -12,16 +12,24 @@ interface LeaderEntry {
 }
 
 const MOCK_LEADERS: LeaderEntry[] = [
-  { rank: 1, name: 'XxDarkBoyxX', score: 142800, accuracy: 97, combo: 312, artist: 'Oxxxymiron', grade: 'S', gradeColor: '#FFD700' },
-  { rank: 2, name: 'MoscowRapper', score: 118500, accuracy: 93, combo: 245, artist: 'SLAVA MARLOW', grade: 'A', gradeColor: '#00FFFF' },
-  { rank: 3, name: 'BeatKiller99', score: 97200, accuracy: 89, combo: 198, artist: 'FACE', grade: 'A', gradeColor: '#00FFFF' },
-  { rank: 4, name: 'RhymeWizard', score: 84100, accuracy: 85, combo: 156, artist: 'Noize MC', grade: 'B', gradeColor: '#39FF14' },
-  { rank: 5, name: 'TrapGod2024', score: 71300, accuracy: 81, combo: 134, artist: 'gone.Fludd', grade: 'B', gradeColor: '#39FF14' },
-  { rank: 6, name: 'FlowMaster', score: 62800, accuracy: 77, combo: 112, artist: 'FACE', grade: 'C', gradeColor: '#BF5FFF' },
-  { rank: 7, name: 'Бро_из_Ростова', score: 54400, accuracy: 72, combo: 89, artist: 'SLAVA MARLOW', grade: 'C', gradeColor: '#BF5FFF' },
-  { rank: 8, name: 'StreetPhilosopher', score: 43200, accuracy: 68, combo: 67, artist: 'Oxxxymiron', grade: 'C', gradeColor: '#BF5FFF' },
-  { rank: 9, name: 'Кирилл228', score: 31700, accuracy: 61, combo: 45, artist: 'Noize MC', grade: 'D', gradeColor: '#FF006E' },
-  { rank: 10, name: 'BassDropper', score: 22100, accuracy: 55, combo: 32, artist: 'gone.Fludd', grade: 'D', gradeColor: '#FF006E' },
+  { rank: 1,  name: 'XxDarkBoyxX',       score: 198400, accuracy: 98, combo: 412, artist: 'Oxxxymiron',       grade: 'S', gradeColor: '#FFD700' },
+  { rank: 2,  name: 'MoscowRapper',       score: 175200, accuracy: 95, combo: 356, artist: 'Гнойный',          grade: 'S', gradeColor: '#FFD700' },
+  { rank: 3,  name: 'BeatKiller99',       score: 152800, accuracy: 93, combo: 298, artist: 'Хаски',            grade: 'A', gradeColor: '#00FFFF' },
+  { rank: 4,  name: 'RhymeWizard',        score: 138100, accuracy: 91, combo: 267, artist: 'Скриптонит',       grade: 'A', gradeColor: '#00FFFF' },
+  { rank: 5,  name: 'TrapGod2025',        score: 124600, accuracy: 89, combo: 234, artist: 'IC3PEAK',          grade: 'A', gradeColor: '#00FFFF' },
+  { rank: 6,  name: 'FlowMaster',         score: 111300, accuracy: 87, combo: 212, artist: 'FACE',             grade: 'A', gradeColor: '#00FFFF' },
+  { rank: 7,  name: 'Бро_из_Ростова',     score: 98700,  accuracy: 85, combo: 189, artist: 'SLAVA MARLOW',     grade: 'B', gradeColor: '#39FF14' },
+  { rank: 8,  name: 'StreetPhilosopher',  score: 87400,  accuracy: 83, combo: 167, artist: 'Big Baby Tape',    grade: 'B', gradeColor: '#39FF14' },
+  { rank: 9,  name: 'Кирилл228',          score: 76200,  accuracy: 81, combo: 145, artist: 'PHARAOH',          grade: 'B', gradeColor: '#39FF14' },
+  { rank: 10, name: 'BassDropper',        score: 68100,  accuracy: 78, combo: 128, artist: 'Miyagi & Andy Panda', grade: 'B', gradeColor: '#39FF14' },
+  { rank: 11, name: 'DragonSlayer',       score: 59800,  accuracy: 75, combo: 112, artist: 'Noize MC',         grade: 'C', gradeColor: '#BF5FFF' },
+  { rank: 12, name: 'НикитаБит',          score: 51200,  accuracy: 72, combo: 98,  artist: 'Lizer',            grade: 'C', gradeColor: '#BF5FFF' },
+  { rank: 13, name: 'RapStar_777',        score: 43900,  accuracy: 69, combo: 84,  artist: 'Instasamka',       grade: 'C', gradeColor: '#BF5FFF' },
+  { rank: 14, name: 'Vladik_flow',        score: 36500,  accuracy: 66, combo: 71,  artist: 'T-Fest',           grade: 'C', gradeColor: '#BF5FFF' },
+  { rank: 15, name: 'PunterMC',           score: 29100,  accuracy: 62, combo: 57,  artist: 'gone.Fludd',       grade: 'D', gradeColor: '#FF006E' },
+  { rank: 16, name: 'AlexStreet',         score: 22700,  accuracy: 58, combo: 43,  artist: 'Элджей',           grade: 'D', gradeColor: '#FF006E' },
+  { rank: 17, name: 'ГришаМск',           score: 16400,  accuracy: 54, combo: 31,  artist: 'Тимати',           grade: 'D', gradeColor: '#FF006E' },
+  { rank: 18, name: 'NewbiePlayer',       score: 9800,   accuracy: 48, combo: 18,  artist: 'Jah Khalib',       grade: 'D', gradeColor: '#FF006E' },
 ];
 
 const DIFFICULTY_FILTERS = ['Все', 'Лёгкий', 'Средний', 'Сложный'];
