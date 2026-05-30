@@ -402,8 +402,9 @@ export default function ConcertBg({ color, bpm, combo, active }: Props) {
         ctx.fillStyle = p.color;
         ctx.shadowColor = p.color;
         ctx.shadowBlur = 8;
+        const radius = Math.max(0.1, p.size * p.life);
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
       }
