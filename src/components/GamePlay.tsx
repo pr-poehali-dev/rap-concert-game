@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Icon from '@/components/ui/icon';
+import ConcertBg from '@/components/ConcertBg';
 
 interface Artist {
   id: string;
@@ -181,8 +182,9 @@ export default function GamePlay({ artist, onNavigate, onGameEnd }: Props) {
 
   if (!started) {
     return (
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
-        <div className="text-center animate-fade-scale">
+      <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        <ConcertBg color={artist.color} bpm={artist.bpm} combo={0} active={false} />
+        <div className="relative z-10 text-center animate-fade-scale">
           <div className="text-6xl mb-4">{artist.emoji}</div>
           <h2
             className="font-oswald font-black text-5xl tracking-widest mb-2"
@@ -230,9 +232,12 @@ export default function GamePlay({ artist, onNavigate, onGameEnd }: Props) {
   }
 
   return (
-    <div className="relative z-10 h-screen flex flex-col overflow-hidden select-none">
+    <div className="relative h-screen flex flex-col overflow-hidden select-none">
+      <ConcertBg color={artist.color} bpm={artist.bpm} combo={combo} active={started} />
       {/* TOP HUD */}
-      <div className="flex items-center justify-between px-4 py-3 flex-shrink-0">
+      <div className="relative z-10 flex items-center justify-between px-4 py-3 flex-shrink-0"
+        style={{ background: 'linear-gradient(to bottom, rgba(5,5,8,0.85) 0%, transparent 100%)' }}
+      >
         <div>
           <div className="font-oswald font-black text-2xl" style={{ color: artist.color }}>
             {score.toLocaleString()}
@@ -271,7 +276,7 @@ export default function GamePlay({ artist, onNavigate, onGameEnd }: Props) {
       </div>
 
       {/* STATS ROW */}
-      <div className="flex items-center justify-between px-4 mb-2 flex-shrink-0">
+      <div className="relative z-10 flex items-center justify-between px-4 mb-2 flex-shrink-0">
         <span className="font-rubik text-xs text-rap-muted">Точность: <span className="text-white">{accuracy}%</span></span>
         <span className="font-rubik text-xs text-rap-muted">
           {Math.max(0, 60 - gameTime)}с
@@ -280,7 +285,7 @@ export default function GamePlay({ artist, onNavigate, onGameEnd }: Props) {
       </div>
 
       {/* LANES */}
-      <div className="flex flex-1 gap-1 px-2 pb-4 relative overflow-hidden">
+      <div className="relative z-10 flex flex-1 gap-1 px-2 pb-4 overflow-hidden">
         {LANE_COLORS.map((color, laneIdx) => (
           <div
             key={laneIdx}
@@ -361,7 +366,7 @@ export default function GamePlay({ artist, onNavigate, onGameEnd }: Props) {
       </div>
 
       {/* MOBILE BUTTONS */}
-      <div className="flex gap-1 px-2 pb-4 flex-shrink-0 md:hidden">
+      <div className="relative z-10 flex gap-1 px-2 pb-4 flex-shrink-0 md:hidden">
         {LANE_COLORS.map((color, i) => (
           <button
             key={i}
