@@ -8,8 +8,9 @@ interface Props {
 export default function MainMenu({ onNavigate, playerName }: Props) {
   const menuItems = [
     { label: 'Играть', icon: 'Play', page: 'select', color: '#FFD700', glow: 'box-glow-gold' },
+    { label: 'Онлайн батл', icon: 'Swords', page: 'battle', color: '#FF006E', glow: 'box-glow-pink' },
     { label: 'Лидерборд', icon: 'Trophy', page: 'leaderboard', color: '#00FFFF', glow: 'box-glow-cyan' },
-    { label: 'Профиль', icon: 'User', page: 'profile', color: '#FF006E', glow: 'box-glow-pink' },
+    { label: 'Профиль', icon: 'User', page: 'profile', color: '#BF5FFF', glow: '' },
     { label: 'Достижения', icon: 'Star', page: 'achievements', color: '#39FF14', glow: 'box-glow-green' },
   ];
 
